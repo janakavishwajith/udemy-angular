@@ -1,0 +1,12 @@
+  <button (click)="toggleDisplay()">Display Details</button>
+<p *ngIf='paraShow'>
+  Secret password = tuna
+</p>
+
+<p *ngFor='let logItem of log; let i = index'
+  [ngStyle]="{backgroundColor: (i > 4) ? 'blue' : 'transparent'}"
+  [ngClass]="{whiteColor : i > 4 }">
+
+  {{logItem}}
+
+</p>
